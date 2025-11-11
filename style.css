@@ -1,0 +1,62 @@
+/* 간단하고 깔끔한 기본 스타일 */
+:root {
+  --bg: #fafafa;       /* yang — 거의 흰색, 미세하게 따뜻한 회백빛 배경 */
+  --text: #111111;     /* yin — 깊고 차분한 먹색, 텍스트 중심 */
+  --muted: #666666;    /* ti — 회색 기운, 중립적이면서 눈에 부담 없는 서브텍스트 */
+  --accent: #2563eb;   /* qi — 균형과 흐름을 상징하는 은빛, 강조지만 절제된 톤 */
+  --card: #f1f1f1;     /* tao — yin과 yang 사이의 완충 톤, 부드러운 박스 영역 */
+
+  --radius: 14px;
+  --shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(960px, 92%);
+  margin: 0 auto;
+}
+
+header {
+  padding: 64px 0 32px;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 0 0 8px;
+}
+
+.tagline {
+  color: var(--muted);
+  margin: 0;
+}
+
+main section {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 16px 0;
+  box-shadow: var(--shadow);
+}
+
+.cta {
+  text-align: center;
+  border: 2px dashed #e5e7eb;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+footer {
+  text-align: center;
+  padding: 48px 0 64px;
+  color: var(--muted);
+}
